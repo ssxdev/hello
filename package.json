@@ -1,7 +1,7 @@
 {
   "name": "@ssxdev/hello",
   "description": "Prints 'Hello World!' to the console",
-  "version": "0.0.1",
+  "version": "0.0.6",
   "main": "./dist/index.js",
   "module": "./dist/index.mjs",
   "types": "./dist/index.d.ts",
@@ -11,7 +11,8 @@
   },
   "homepage": "https://surendar.co",
   "scripts": {
-    "build": "tsup"
+    "build": "tsup",
+    "push": "npm run build && npm publish"
   },
   "keywords": [
     "hello"

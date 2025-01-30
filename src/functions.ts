@@ -1,13 +1,17 @@
 import { SayHelloProps } from "./types";
 
-export function sayHello({ firstName, lastName, age }: SayHelloProps): void {
+export function sayHello({
+  firstName,
+  lastName,
+  age,
+}: SayHelloProps = {}): string {
   if (firstName && lastName && age) {
-    console.log(`Hello ${firstName} ${lastName}, you are ${age} years old!`);
+    return `Hello ${firstName} ${lastName}, you are ${age} years old!`;
   } else if (firstName && lastName) {
-    console.log(`Hello ${firstName} ${lastName}!`);
+    return `Hello ${firstName} ${lastName}!`;
   } else if (firstName) {
-    console.log(`Hello ${firstName}!`);
+    return `Hello ${firstName}!`;
   } else {
-    console.log("Hello World!");
+    return "Hello World!";
   }
 }
